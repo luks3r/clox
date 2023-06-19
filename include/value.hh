@@ -6,6 +6,7 @@
 #define CLOX_VALUE_H
 
 #include <cstdint>
+#include <cstring>
 #include <iostream>
 #include "object.hh"
 #include "memory.hh"
@@ -41,15 +42,13 @@ public:
         return isNil() || (isBool() && !asBool());
     }
 
-    constexpr bool is(ValueType type) const { return this->type == type; }
+    constexpr bool isBool() const { return type == ValueType::BOOL; }
 
-    constexpr bool isBool() const { return is(ValueType::BOOL); }
+    constexpr bool isNil() const { return type == ValueType::NIL; }
 
-    constexpr bool isNil() const { return is(ValueType::NIL); }
+    constexpr bool isNumber() const { return type == ValueType::NUMBER; }
 
-    constexpr bool isNumber() const { return is(ValueType::NUMBER); }
-
-    constexpr bool isObject() const { return is(ValueType::OBJECT); }
+    constexpr bool isObject() const { return type == ValueType::OBJECT; }
 
     constexpr bool isString() const { return isObjType(ObjectType::STRING); }
 
@@ -101,7 +100,7 @@ public:
     }
 
 private:
-    inline bool isObjType(ObjectType type) const {
+    constexpr inline bool isObjType(ObjectType type) const {
         return isObject() && asObject()->type == type;
     }
 
