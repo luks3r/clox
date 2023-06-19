@@ -10,10 +10,10 @@
 #define STACK_MAX 256
 
 struct VM {
-    Chunk *chunk;
-    uint8_t *ip;
+    Chunk *chunk{};
+    uint8_t *ip{};
     Value stack[STACK_MAX];
-    Value *stackTop;
+    Value *stackTop{};
 };
 
 enum struct InterpretResult {
