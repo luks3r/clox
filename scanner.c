@@ -3,6 +3,8 @@
 //
 
 #include <string.h>
+#include <stdbool.h>
+#include <stdint.h>
 #include "scanner.h"
 
 typedef struct Scanner {
