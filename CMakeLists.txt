@@ -8,7 +8,6 @@ add_compile_options(
         -Wall
         -Wextra
         -Werror
-        -Wabi
 )
 
 add_executable(clox
