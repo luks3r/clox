@@ -63,7 +63,7 @@ int32_t disassembleInstruction(Chunk *chunk, int32_t offset) {
         case OpCode::LESS:
             return simpleInstruction("LESS", offset);
         default:
-            printf("Unknown opcode %hhu\n", instruction);
+            printf("Unknown opcode %hhu\n", static_cast<uint8_t>(instruction));
             return offset + 1;
     }
 }
