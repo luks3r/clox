@@ -2,9 +2,8 @@
 // Created by Sergei Lukaushkin on 17.06.2023.
 //
 
-#include <iostream>
 #include <cstdlib>
-#include <map>
+#include <unordered_map>
 #include "compiler.hh"
 #include "scanner.hh"
 #include "value.hh"
@@ -351,6 +350,7 @@ static void binary() {
     }
 }
 
+[[gnu::unused]]
 static void string() {
     emitConstant(Value(copyString(parser.previous.start + 1, parser.previous.length - 2)));
 }
