@@ -2,8 +2,6 @@
 // Created by Sergei Lukaushkin on 17.06.2023.
 //
 
-#include <stdint.h>
-#include <stdbool.h>
 #include <string.h>
 #include "scanner.h"
 

@@ -2,7 +2,7 @@
 // Created by Sergei Lukaushkin on 17.06.2023.
 //
 
-#include <printf.h>
+#include <stdio.h>
 #include "debug.h"
 
 int32_t simpleInstruction(const char *name, int32_t offset) {

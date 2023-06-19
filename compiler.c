@@ -2,8 +2,7 @@
 // Created by Sergei Lukaushkin on 17.06.2023.
 //
 
-#include <printf.h>
-#include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "compiler.h"
 #include "scanner.h"

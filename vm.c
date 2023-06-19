@@ -3,8 +3,7 @@
 //
 
 #include <stdarg.h>
-#include <printf.h>
-#include <stdbool.h>
+#include <stdio.h>
 #include "vm.h"
 #include "value.h"
 #include "config.h"
