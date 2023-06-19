@@ -100,8 +100,8 @@ public:
     }
 
 private:
-    constexpr inline bool isObjType(ObjectType type) const {
-        return isObject() && asObject()->type == type;
+    constexpr inline bool isObjType(ObjectType objectType) const {
+        return isObject() && asObject()->type == objectType;
     }
 
     void printObject() const {
@@ -118,7 +118,7 @@ struct ValueArray {
     int32_t count;
     Value *values;
 
-    ValueArray() : values(nullptr), capacity(0), count(0) {}
+    ValueArray() : capacity(0), count(0), values(nullptr) {}
 
     ~ValueArray() {
         reallocate(values, sizeof(Value) * capacity, 0);

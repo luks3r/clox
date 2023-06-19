@@ -4,6 +4,13 @@ project(clox CXX)
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_CXX_STANDARD 23)
 
+add_compile_options(
+        -Wall
+        -Wextra
+        -Werror
+        -Wabi
+)
+
 add_executable(clox
         src/main.cc
         src/chunk.cc include/chunk.hh
